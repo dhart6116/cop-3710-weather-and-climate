@@ -1,7 +1,7 @@
 CREATE TABLE city_attributes (
 	CityID INTEGER PRIMARY KEY,
-	Latitude FLOAT,
-	Longitude FLOAT,
+	Latitude FLOAT(24),
+	Longitude FLOAT(24),
 	CityName VARCHAR(20),
 	Country VARCHAR(20)
 );
@@ -20,5 +20,5 @@ CREATE TABLE weather_desc_lookup (
 
 CREATE TABLE humidity (
 	RecordID INTEGER PRIMARY KEY,
-	Humidity FLOAT
+	Humidity FLOAT(24)
 );
