@@ -1,5 +1,5 @@
 CREATE TABLE city_attributes (
-	CityID INTEGER PRIMARY KEY,
+	CityID INT PRIMARY KEY,
 	Latitude FLOAT(24),
 	Longitude FLOAT(24),
 	CityName VARCHAR(20),
@@ -7,18 +7,39 @@ CREATE TABLE city_attributes (
 );
 
 CREATE TABLE records (
-	RecordID INTEGER PRIMARY KEY,
-	CityID INTEGER,
+	RecordID INT PRIMARY KEY,
+	CityID INT,
 	DateDay DATE,
-	DateHour INTEGER
+	DateHour INT
 );
 
 CREATE TABLE weather_desc_lookup (
-	DescID INTEGER PRIMARY KEY,
+	DescID INT PRIMARY KEY,
 	Description VARCHAR(30)
 );
 
 CREATE TABLE humidity (
-	RecordID INTEGER PRIMARY KEY,
+	RecordID INT PRIMARY KEY,
 	Humidity FLOAT(24)
+);
+
+CREATE TABLE pressure (
+	RecordID INT PRIMARY KEY,
+	Pressure FLOAT(24)
+);
+
+CREATE TABLE temperature (
+	RecordID INT PRIMARY KEY,
+	Temperature FLOAT(24)
+);
+
+CREATE TABLE wind (
+	RecordID INT PRIMARY KEY,
+	WindDir FLOAT(24),
+	WindSpd FLOAT(24)
+);
+
+CREATE TABLE weather_description (
+	RecordID INT PRIMARY KEY,
+	DescID INT
 );
