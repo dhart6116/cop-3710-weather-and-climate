@@ -28,6 +28,7 @@ def load_city_attributes(fpath):
         # Being loading
         print(f"Starting bulk load of {len(city_data)} rows into city_attributes...")
         cursor.executemany(city_sql, city_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -51,6 +52,7 @@ def load_weather_desc_lookup(fpath):
         # Being loading
         print(f"Starting bulk load of {len(desc_lookup_data)} rows into weather_desc_lookup...")
         cursor.executemany(desc_lookup_sql, desc_lookup_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -74,6 +76,7 @@ def load_records(fpath):
         # Being loading
         print(f"Starting bulk load of {len(records_data)} rows into records...")
         cursor.executemany(records_sql, records_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -97,6 +100,7 @@ def load_humidity(fpath):
         # Being loading
         print(f"Starting bulk load of {len(humidity_data)} rows into humidity...")
         cursor.executemany(humidity_sql, humidity_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -120,6 +124,7 @@ def load_pressure(fpath):
         # Being loading
         print(f"Starting bulk load of {len(pressure_data)} rows into pressure...")
         cursor.executemany(pressure_sql, pressure_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -143,6 +148,7 @@ def load_temperature(fpath):
         # Being loading
         print(f"Starting bulk load of {len(temperature_data)} rows into temperature...")
         cursor.executemany(temperature_sql, temperature_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -166,6 +172,7 @@ def load_wind(fpath):
         # Being loading
         print(f"Starting bulk load of {len(wind_data)} rows into wind...")
         cursor.executemany(wind_sql, wind_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
@@ -189,6 +196,7 @@ def load_weather_desc(fpath):
         # Being loading
         print(f"Starting bulk load of {len(weather_desc_data)} rows into weather_description...")
         cursor.executemany(weather_desc_sql, weather_desc_data)
+        conn.commit()
         
         cursor.close()
         conn.close()
