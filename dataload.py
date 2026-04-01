@@ -20,7 +20,7 @@ def load_city_attributes(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            city_data = [row for row in header]
+            city_data = [row for row in reader]
         
         # Bulk-load command
         city_sql = "INSERT INTO city_attributes (CityID, CityName, Country, Latitude, Longitude) VALUES (:1, :2, :3, :4, :5)"
@@ -46,7 +46,7 @@ def load_weather_desc_lookup(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            desc_lookup_data = [row for row in header]
+            desc_lookup_data = [row for row in reader]
         
         # Bulk-load command
         desc_lookup_sql = "INSERT INTO weather_desc_lookup (DescID, Description) VALUES (:1, :2)"
@@ -72,7 +72,7 @@ def load_records(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            records_data = [row for row in header]
+            records_data = [row for row in reader]
         
         # Bulk-load command
         records_sql = "INSERT INTO records (RecordID, CityID, DateDay, DateHour) VALUES (:1, :2, :3, :4)"
@@ -98,7 +98,7 @@ def load_humidity(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            humidity_data = [row for row in header]
+            humidity_data = [row for row in reader]
         
         # Bulk-load command
         humidity_sql = "INSERT INTO humidity (RecordID, Humidity) VALUES (:1, :2)"
@@ -124,7 +124,7 @@ def load_pressure(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            pressure_data = [row for row in header]
+            pressure_data = [row for row in reader]
         
         # Bulk-load command
         pressure_sql = "INSERT INTO pressure (RecordID, Pressure) VALUES (:1, :2)"
@@ -150,7 +150,7 @@ def load_temperature(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            temperature_data = [row for row in header]
+            temperature_data = [row for row in reader]
         
         # Bulk-load command
         temperature_sql = "INSERT INTO temperature (RecordID, Temperature) VALUES (:1, :2)"
@@ -176,7 +176,7 @@ def load_wind(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            wind_data = [row for row in header]
+            wind_data = [row for row in reader]
         
         # Bulk-load command
         wind_sql = "INSERT INTO wind (RecordID, WindDir, WindSpd) VALUES (:1, :2, :3)"
@@ -202,7 +202,7 @@ def load_weather_desc(fpath):
         with open(fpath, mode = 'r', encoding = 'utf-8') as f:
             reader = csv.reader(f)
             next(reader)
-            weather_desc_data = [row for row in header]
+            weather_desc_data = [row for row in reader]
         
         # Bulk-load command
         weather_desc_sql = "INSERT INTO weather_description (RecordID, DescID) VALUES (:1, :2)"
