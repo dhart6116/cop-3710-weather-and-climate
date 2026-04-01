@@ -3,9 +3,9 @@ import csv
 
 # Initialize database information
 LIB_DIR = r"C:\oracle\instantclient_21_3"
-DB_USER = "your_username"
-DB_PASS = "your_password"
-DB_DSN = "host:port/service_name"
+DB_USER = "system"
+DB_PASS = "testpass1"
+DB_DSN = "localhost:1521/xe"
 
 # Initialize thick mode
 oracledb.init_oracle_client(lib_dir=LIB_DIR)
