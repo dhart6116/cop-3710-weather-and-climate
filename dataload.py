@@ -33,6 +33,10 @@ def load_city_attributes(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into city_attributes")
 
 def load_weather_desc_lookup(fpath):
     try:
@@ -57,6 +61,10 @@ def load_weather_desc_lookup(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into weather_desc_lookup")
 
 def load_records(fpath):
     try:
@@ -81,6 +89,10 @@ def load_records(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into records")
 
 def load_humidity(fpath):
     try:
@@ -105,6 +117,10 @@ def load_humidity(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into humidity")
         
 def load_pressure(fpath):
     try:
@@ -129,6 +145,10 @@ def load_pressure(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into pressure")
         
 def load_temperature(fpath):
     try:
@@ -153,6 +173,10 @@ def load_temperature(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into temperature")
         
 def load_wind(fpath):
     try:
@@ -177,6 +201,10 @@ def load_wind(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into wind")
         
 def load_weather_desc(fpath):
     try:
@@ -191,7 +219,7 @@ def load_weather_desc(fpath):
             weather_desc_data = [row for row in header]
         
         # Bulk-load command
-        weather_desc_sql = "INSERT INTO wind (RecordID, DescID) VALUES (:1, :2)"
+        weather_desc_sql = "INSERT INTO weather_description (RecordID, DescID) VALUES (:1, :2)"
         
         # Being loading
         print(f"Starting bulk load of {len(weather_desc_data)} rows into weather_description...")
@@ -201,3 +229,16 @@ def load_weather_desc(fpath):
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
+    except:
+        cursor.close()
+        conn.close()
+        print("Error while loading into weather_description")
+
+load_city_attributes(data/city_attributes.csv)
+load_weather_desc_lookup(data/weather_desc_lookup.csv)
+load_records(data/records.csv)
+load_humidity(data/humidity.csv)
+load_pressure(data/pressure.csv)
+load_temperature(data/temperature.csv)
+load_wind(data/wind.csv)
+load_weather_desc(data/weather_description.csv)
