@@ -29,14 +29,12 @@ def load_city_attributes(fpath):
         print(f"Starting bulk load of {len(city_data)} rows into city_attributes...")
         cursor.executemany(city_sql, city_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into city_attributes")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into city_attributes")
 
 def load_weather_desc_lookup(fpath):
     try:
@@ -57,14 +55,12 @@ def load_weather_desc_lookup(fpath):
         print(f"Starting bulk load of {len(desc_lookup_data)} rows into weather_desc_lookup...")
         cursor.executemany(desc_lookup_sql, desc_lookup_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into weather_desc_lookup")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into weather_desc_lookup")
 
 def load_records(fpath):
     try:
@@ -85,14 +81,12 @@ def load_records(fpath):
         print(f"Starting bulk load of {len(records_data)} rows into records...")
         cursor.executemany(records_sql, records_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into records")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into records")
 
 def load_humidity(fpath):
     try:
@@ -113,15 +107,13 @@ def load_humidity(fpath):
         print(f"Starting bulk load of {len(humidity_data)} rows into humidity...")
         cursor.executemany(humidity_sql, humidity_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into humidity")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into humidity")
-        
+
 def load_pressure(fpath):
     try:
         # Make connection
@@ -141,14 +133,12 @@ def load_pressure(fpath):
         print(f"Starting bulk load of {len(pressure_data)} rows into pressure...")
         cursor.executemany(pressure_sql, pressure_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into pressure")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into pressure")
         
 def load_temperature(fpath):
     try:
@@ -169,14 +159,12 @@ def load_temperature(fpath):
         print(f"Starting bulk load of {len(temperature_data)} rows into temperature...")
         cursor.executemany(temperature_sql, temperature_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into temperature")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into temperature")
         
 def load_wind(fpath):
     try:
@@ -197,14 +185,12 @@ def load_wind(fpath):
         print(f"Starting bulk load of {len(wind_data)} rows into wind...")
         cursor.executemany(wind_sql, wind_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into wind")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into wind")
         
 def load_weather_desc(fpath):
     try:
@@ -225,14 +211,12 @@ def load_weather_desc(fpath):
         print(f"Starting bulk load of {len(weather_desc_data)} rows into weather_description...")
         cursor.executemany(weather_desc_sql, weather_desc_data)
         conn.commit()
-        
+    except:
+        print("Error while loading into weather_description")
+    finally:
         cursor.close()
         conn.close()
         print("Oracle connection closed.")
-    except:
-        cursor.close()
-        conn.close()
-        print("Error while loading into weather_description")
 
 load_city_attributes(data/city_attributes.csv)
 load_weather_desc_lookup(data/weather_desc_lookup.csv)
