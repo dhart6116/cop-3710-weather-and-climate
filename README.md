@@ -7,3 +7,5 @@ Application Domain: Long-term climate analysis
 Users: Meteorologists and weather enthusiasts
 
 Data Source: https://www.kaggle.com/datasets/selfishgene/historical-hourly-weather-data
+
+[ER Diagram can be found here.](database_er.md)
