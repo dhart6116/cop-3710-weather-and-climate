@@ -1,0 +1,5 @@
+1: Temperature Lookup by City and Date (Retrieves hourly temperature data by joining the city_attributes, records, and temperature tables)
+2: High Wind Speed Alert (Filters the wind table to identify and display locations and times where wind speeds exceeded a user-defined threshold)
+3: Weather Description Search (A keyword-based search that joins weather_description with the weather_desc_lookup table to find specific atmospheric conditions (e.g., "heavy rain").)
+4: City Geographic Detail Retrieval (Fetches country and coordinate data (latitude/longitude) from the city_attributes table for a specified city.)
+5: Average Historical Temperature Analysis (Calculates the mean temperature for a specific city across all recorded data points using an aggregate join of the records and temperature tables.)
