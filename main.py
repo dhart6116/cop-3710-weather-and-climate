@@ -1,7 +1,7 @@
 import oracledb
 
 DB_USER = "system"
-DB_PASS = "Connor07"
+DB_PASS = "testpass1"
 DB_DSN = "localhost:1521/XE" 
 
 # Initialize thick mode - COMMENTED OUT TO USE THIN MODE (Fixes DPI-1047)
