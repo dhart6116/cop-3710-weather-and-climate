@@ -9,3 +9,10 @@ Users: Meteorologists and weather enthusiasts
 Data Source: https://www.kaggle.com/datasets/selfishgene/historical-hourly-weather-data
 
 [ER Diagram can be found here.](database_er.md)
+
+# How to use
+
+- Use create_db to create the database tables
+- Change lines 5-8 in dataload and 3-5 in main to your database's information
+- Use dataload to populate the tables with data
+- Run main.py with the command "Python -m main.py"
