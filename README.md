@@ -16,3 +16,5 @@ Data Source: https://www.kaggle.com/datasets/selfishgene/historical-hourly-weath
 - Change lines 5-8 in dataload and 3-5 in main to your database's information
 - Use dataload to populate the tables with data
 - Run main.py with the command "Python -m main.py"
+
+<img width="508" height="192" alt="image" src="https://github.com/user-attachments/assets/ea5d1084-895f-4478-9bb3-9936c072325d" />
